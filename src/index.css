@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,body{
+    @apply  bg-gradient-to-tr from-sky-200 to-gray-600 m-0 p-0 h-auto 
+  }
+  #root{@apply h-full  }
+}
+
+@layer components {
+  .App {
+    @apply flex items-center justify-around  flex-col 
+  }
+
+  section {
+    @apply flex  pt-6 shadow-2xl p-12 m-12 justify-center items-center flex-col bg-transparent rounded-3xl
+  }
+
+  section input[type="color"] {
+    @apply m-3 appearance-none w-32 h-32 border-none rounded-full
+  }
+
+  section input[type="color"]::-webkit-color-swatch {
+    @apply rounded-full cursor-pointer border-none drop-shadow-3xl shadow-inner shadow-sky-400
+  }
+
+  section input[type="text"] {
+    @apply border-2 border-slate-300 rounded-full text-sky-300  p-3 font-mono font-bold text-2xl w-max h-max 
+  }
+  article {
+    @apply flex justify-center items-center  p-12  flex-col h-full w-[96rem] bg-transparent  mb-12 shadow-2xl rounded-3xl flex-wrap
+  }
+  article .add{
+    @apply p-3 bg-gradient-to-tr from-transparent to-sky-950 rounded-full text-3xl text-white uppercase font-sans italic hover:scale-105 duration-100 ease-linear hover:drop-shadow-3xl m-12
+  }
+  .paletts {
+    @apply  w-full relative flex justify-center items-center flex-wrap 
+  }
+.palette{
+  @apply p-1  m-12 h-56 w-72 relative rounded-3xl border-t-8 border-l-4 border-sky-200 bg-gradient-to-tr from-sky-300 via-transparent 
+}
+.copy{
+  @apply  text-3xl uppercase absolute top-0 p-3 rounded-b-3xl rounded-t-xl left-0  border-b-4 border-r-4 border-sky-300 h-16 flex justify-center items-center hover:bg-sky-300 hover:rounded-b-full hover:rounded-l-2xl hover:animate-pulse bg-sky-50  duration-150 ease-linear hover:rounded-l-2xl
+}
+.remove{
+  @apply absolute bottom-0 right-0 mb-2 mr-2  shadow-2xl shadow-inner rounded-full p-3  border-b-4 border-r-4 border-sky-300 hover:bg-sky-300 hover:animate-pulse bg-sky-50 duration-300 ease-linear
+}
+}
